@@ -21,7 +21,6 @@
           label="Password"
           v-model="password"
           prepend-icon="mdi-lock"
-          :rules="[validatePassword]"
           :type="passwordVisible ? 'text' : 'password'"
           :append-icon="passwordVisible ? 'mdi-eye' : 'mdi-eye-off'"
           @click:append="passwordVisible = !passwordVisible"
