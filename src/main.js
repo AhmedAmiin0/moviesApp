@@ -8,7 +8,6 @@ import { createApp } from 'vue'
 // Plugins
 import { registerPlugins } from '@/plugins'
 import router from '@/router/routes'
-import { plugin, defaultConfig } from '@formkit/vue'
 
 
 const pinia = createPinia()
@@ -17,5 +16,4 @@ app.use(router)
 
 registerPlugins(app)
 app.use(pinia)
-app.use(plugin, defaultConfig)
 app.mount('#app')
