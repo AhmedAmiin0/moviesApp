@@ -5,15 +5,15 @@
       <template v-if="token != null">
         <VBtn :to="{ name: 'Movies' }">Movies</VBtn>
         <VBtn :to="{ name: 'Categories' }">Categories</VBtn>
-        <VBtn
-          :prepend-icon="
-            theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'
-          "
-          @click="onClick"
-          >Toggle Theme</VBtn
-        >
-        <VBtn @click="logout" color="error">Logout</VBtn>
       </template>
+      <VBtn
+        :prepend-icon="
+          theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'
+        "
+        @click="onClick"
+        >Toggle Theme</VBtn
+      >
+      <VBtn @click="logout" color="error" v-if="token != null">Logout</VBtn>
     </VAppBar>
     <VMain>
       <VContainer>
