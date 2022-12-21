@@ -60,12 +60,6 @@ export const routes = [
     component: () => import("@/views/Auth/Register.vue"),
     meta: { requireAuth: false },
   },
-  {
-    path: "/:pathMatch(.*)*",
-    name: "NotFound",
-    component: () => import("@/views/NotFound.vue"),
-    meta: { requireAuth: false },
-  },
 ];
 const router = createRouter({
   history: createWebHistory(),
